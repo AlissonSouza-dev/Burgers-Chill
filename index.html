@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="imagens/iconburguer.png">
+    <title>Burgers & Chill</title>
+</head>
+
+<body>
+    <div class="carrinho-container">
+
+        <div class="carrinho" id="carrinho-itens-lista">
+            <header class="carrinho-header">
+                <h2 class="carrinho-title"><i class="fa-solid fa-cart-shopping carrinho-icon"></i>Seu Pedido</h2> <i
+                    class="fa-solid fa-xmark carrinho-x"></i>
+            </header>
+            <section class="item-list">
+
+            </section>
+            <div class="carrinho-vazio">
+                <h3 class="carrinho-vazio-icon">🍔</h3>
+                <h3 class="carrinho-vazio-title">Seu carrinho está vazio</h3>
+                <p class="carrinho-vazio-subtitle">Adicione alguns itens deliciosos!</p>
+            </div>
+
+            <div class="carrinho-cheio">
+                <div class="total-container">
+                    <h3 class="carrinho-cheio-total-title">Total:</h3> <span class="total">R$<span
+                            id="total-number"></span></span>
+                </div>
+                <a href="" class="whatsapp-button" id="btn-whatsapp"><i
+                        class="fa-brands fa-whatsapp carrinho-cheio-icon"></i>Continuar no
+                    WhatsApp</a>
+                <p class="carrinho-cheio-total-subtitle">Você será redirecionado para o WhatsApp com seu pedido</p>
+            </div>
+        </div>
+    </div>
+    <div class="totalItens-container">
+        <div class="totalItens">
+            <i class="fa-solid fa-cart-shopping totalIcon"></i>
+            <div class="totalitenstext-container">
+                <div class="totaldiv"><span id="totalItemAmout"></span>
+                    <p id="totalP">Item</p>
+                </div>
+                <div class="totaldiv">
+                    <h3>R$</h3><span id="totalItemPrice"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <header>
+        <nav class="nav-bar">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-burger logo-icon"></i>
+
+                <div class="logo-text">
+                    <h1>Burgers & Chill</h1>
+                    <p>A melhor lanchonete da cidade</p>
+                </div>
+            </a>
+
+            <button class="nav-button" id="cart-button"><i class="fa-solid fa-cart-shopping"></i> <span
+                    id="cart-itens-number">0</span></button>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Sabor que Conquista</h1>
+                <p>Hambúrgueres artesanais feitos com amor, ingredientes
+                    frescos e muito sabor</p>
+            </div>
+            <a href="#cardapio" class="hero-button">Ver Cardápio Completo</a>
+        </div>
+
+    </main>
+    <section class="section-menu">
+        <div class="section-menu-container">
+
+            <div class="menu-text" id="cardapio">
+                <h1>Nosso Cardápio</h1>
+                <p>Escolha entre nossas deliciosas opções</p>
+            </div>
+
+            <nav class="menu-options" aria-label="Filtros do cardápio">
+                <ul data-aos="fade-up">
+                    <li><button type="button" data-filter="all" class="active">Todos</button></li>
+                    <li><button type="button" data-filter="lanches">Lanches</button></li>
+                    <li><button type="button" data-filter="acompanhamentos">Acompanhamentos</button></li>
+                    <li><button type="button" data-filter="sobremesas">Sobremesas</button></li>
+                    <li><button type="button" data-filter="bebidas">Bebidas</button></li>
+                </ul>
+            </nav>
+
+            <section class="cardapio">
+                <div data-aos="fade-up" class="item" data-category="lanches" data-title="X-Bacon Supremo" data-price="24.90"
+                    data-img="imagens/hamburguer.jpg">
+                    <img src="imagens/hamburguer.jpg" alt="">
+
+                    <div class="item-container">
+                        <h3>X-Bacon Supremo</h3>
+                        <p class="item-p">Hambúrguer artesanal, bacon crocante, queijo cheddar e cebola caramelizada</p>
+
+                        <div class="price-and-button">
+                            <span class="price">R$ 24.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div data-aos="fade-up" class="item" data-category="lanches" data-title="X-Burger Clássico" data-price="18.90"
+                    data-img="imagens/X-burguer.jpg">
+                    <img src="imagens/X-burguer.jpg" alt="X-Burger Clássico">
+
+                    <div class="item-container">
+                        <h3>X-Burger Clássico</h3>
+                        <p class="item-p">Hambúrguer artesanal, queijo, alface, tomate e molho especial</p>
+
+                        <div class="price-and-button">
+                            <span class="price">R$ 18.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div data-aos="fade-up" class="item" data-category="lanches" data-title="X-Salada Fitness" data-price="21.90"
+                    data-img="imagens/X-Salada.jpg">
+                    <img src="imagens/X-Salada.jpg" alt="X-Salada Fitness">
+                    <div class="item-container">
+                        <h3>X-Salada Fitness</h3>
+                        <p class="item-p">Hambúrguer de frango grelhado, queijo branco, alface, tomate e molho iogurte
+                        </p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 21.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="lanches" data-title="X-Tudo Gigante" data-price="28.90"
+                    data-img="imagens/X-Tudo.jpg">
+                    <img src="imagens/X-Tudo.jpg" alt="X-Tudo Gigante">
+                    <div class="item-container">
+                        <h3>X-Tudo Gigante</h3>
+                        <p class="item-p">Duplo hambúrguer, bacon, ovo, queijo, presunto, alface e tomate</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 28.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="acompanhamentos" data-title="Batata Frita" data-price="12.90"
+                    data-img="imagens/Batatas-Fritas.jpg">
+                    <img src="imagens/Batatas-Fritas.jpg" alt="Batata Frita">
+                    <div class="item-container">
+                        <h3>Batata Frita</h3>
+                        <p class="item-p">Batatas crocantes temperadas com ervas finas e queijo parmesão</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 12.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="acompanhamentos" data-title="Onion Rings" data-price="14.90"
+                    data-img="imagens/Onion-Rings.jpg">
+                    <img src="imagens/Onion-Rings.jpg" alt="Onion Rings">
+                    <div class="item-container">
+                        <h3>Onion Rings</h3>
+                        <p class="item-p">Anéis de cebola empanados e dourados, servidos com molho barbecue</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 14.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="acompanhamentos" data-title="Nuggets de Frango" data-price="16.90"
+                    data-img="imagens/Nuggets.jpg">
+                    <img src="imagens/Nuggets.jpg" alt="Nuggets de Frango">
+                    <div class="item-container">
+                        <h3>Nuggets de Frango</h3>
+                        <p class="item-p">8 unidades de nuggets crocantes com molho à escolha</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 16.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="sobremesas" data-title="Brownie com Sorvete" data-price="16.90"
+                    data-img="imagens/Brownie.jpg">
+                    <img src="imagens/Brownie.jpg" alt="Brownie com Sorvete">
+                    <div class="item-container">
+                        <h3>Brownie com Sorvete</h3>
+                        <p class="item-p">Brownie quente de chocolate com bola de sorvete de baunilha</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 16.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="sobremesas" data-title="Petit Gateau" data-price="18.90"
+                    data-img="imagens/Petit-Gateau.jpg">
+                    <img src="imagens/Petit-Gateau.jpg" alt="Petit Gateau">
+                    <div class="item-container">
+                        <h3>Petit Gateau</h3>
+                        <p class="item-p">Bolinho de chocolate quente com recheio cremoso e sorvete</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 18.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="sobremesas" data-title="Cheesecake" data-price="14.90"
+                    data-img="imagens/Cheesecake.jpg">
+                    <img src="imagens/Cheesecake.jpg" alt="Cheesecake">
+                    <div class="item-container">
+                        <h3>Cheesecake</h3>
+                        <p class="item-p">Fatia de cheesecake cremoso com calda de frutas vermelhas</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 14.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="bebidas" data-title="Coca-Cola 1L" data-price="8.90"
+                    data-img="imagens/coca1l.jpg">
+                    <img src="imagens/coca1l.jpg" alt="Coca-Cola 1L">
+                    <div class="item-container">
+                        <h3>Coca-Cola 1L</h3>
+                        <p class="item-p">Refrigerante Coca-Cola tradicional, garrafa de 1 litro bem gelada.</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 8.90</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="bebidas" data-title="Guaraná Antarctica 1L" data-price="8.50"
+                    data-img="imagens/guarana1l.jpg">
+                    <img src="imagens/guarana1l.jpg" alt="Guaraná Antarctica 1L">
+                    <div class="item-container">
+                        <h3>Guaraná Antarctica 1L</h3>
+                        <p class="item-p">Refrigerante Guaraná Antarctica, 1 litro, sabor leve e refrescante.</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 8.50</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="bebidas" data-title="Fanta Laranja 1L" data-price="8.00"
+                    data-img="imagens/fanta1l.jpg">
+                    <img src="imagens/fanta1l.jpg" alt="Fanta Laranja 1L">
+                    <div class="item-container">
+                        <h3>Fanta Laranja 1L</h3>
+                        <p class="item-p">Refrigerante Fanta sabor laranja, garrafa de 1 litro bem gelada.</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 8.00</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="item" data-category="bebidas" data-title="Pepsi 1L" data-price="8.50"
+                    data-img="imagens/pepsi1l.jpg">
+                    <img src="imagens/pepsi1l.jpg" alt="Pepsi 1L">
+                    <div class="item-container">
+                        <h3>Pepsi 1L</h3>
+                        <p class="item-p">Pepsi de 1 litro, sabor marcante e refrescante, ideal para acompanhar seu
+                            lanche.</p>
+                        <div class="price-and-button">
+                            <span class="price">R$ 8.50</span>
+                            <button class="btn-adicionar">+ Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-logo">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-burger logo-icon"></i>
+
+                    <div class="logo-text">
+                        <h1>Burgers & Chill</h1>
+                    </div>
+                </a>
+                <p class="footer-p">A melhor lanchonete da cidade</p>
+            </div>
+
+            <div class="footer-info-container">
+                <div class="footer-info-box">
+                    <h2 class="footer-info-title"><i class="fa-solid fa-map-pin footer-icon"></i>Endereço</h2>
+                    <p>Rua dos Sabores, 123</p>
+                    <p>Centro - São Paulo</p>
+                </div>
+
+                <div class="footer-info-box">
+                    <h2 class="footer-info-title"><i class="fa-solid fa-phone footer-icon"></i>Contato</h2>
+                    <p>(11) 99999-9999</p>
+                    <p>contato@burgerschill.com</p>
+                </div>
+
+                <div class="footer-info-box">
+                    <h2 class="footer-info-title"><i class="fa-solid fa-clock footer-icon"></i>Funcionamento</h2>
+                    <p>Segunda a Domingo</p>
+                    <p>18h às 23h</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-credits">
+            <p class="footer-credits-p">© 2025 Burgers & Chill. Site criado por
+                <a id="footer-credits-github" href="https://github.com/AlissonSouza-dev" target="_blank"
+                    alt="Alisson Souza github">Alisson Souza.</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
